@@ -5,6 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+/**
+ * 项目启动类
+ * @author KE
+ *
+ */
 @SpringBootApplication
 public class MeimeissApplication extends SpringBootServletInitializer {
 
