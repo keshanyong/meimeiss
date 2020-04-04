@@ -12,7 +12,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  *
  */
 @SpringBootApplication
-@MapperScan(basePackages = {"com.example.meimeiss.mapper"})
+@MapperScan(basePackages = {"com.example.meimeiss.dao"})
 public class MeimeissApplication extends SpringBootServletInitializer {
 
     @Override

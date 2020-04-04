@@ -1,5 +1,9 @@
 package com.example.meimeiss.service;
 
+import com.example.meimeiss.entity.UserData;
+
+import java.util.List;
+
 public interface LoginService {
 
     /**
@@ -7,4 +11,10 @@ public interface LoginService {
      * @return
      */
     String UserLogin();
+
+    /**
+     * 查询用户数据
+     * @return
+     */
+    List<UserData> getUserDataList();
 }

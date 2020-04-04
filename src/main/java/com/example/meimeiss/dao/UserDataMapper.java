@@ -2,6 +2,8 @@ package com.example.meimeiss.dao;
 
 import com.example.meimeiss.entity.UserData;
 
+import java.util.List;
+
 public interface UserDataMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface UserDataMapper {
     int updateByPrimaryKeySelective(UserData record);
 
     int updateByPrimaryKey(UserData record);
+
+    List<UserData> getUserListData();
 }
