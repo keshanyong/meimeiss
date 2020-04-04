@@ -71,20 +71,26 @@
 
         <!-- 6-1、单个表生成策略  -->
         <!--生成对应表及类名-->
-        <!--        <table tableName="t_dept" domainObjectName="Dept" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">-->
-        <!--       </table>-->
-
-        <!-- 6-2、整个数据库批量生成策略 -->
-        <table tableName="%"
+        <table tableName="user_data"
+               domainObjectName="UserData"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
                enableSelectByExample="false"
                selectByExampleQueryId="false">
-            <property name="useActualColumnNames" value="false" />
-            <!-- 数据库表主键 -->
-            <!--   <generatedKey column="id" sqlStatement="Mysql" identity="true" /> -->
-        </table>
+       </table>
+
+        <!-- 6-2、整个数据库批量生成策略 -->
+<!--        <table tableName="%"-->
+<!--               enableCountByExample="false"-->
+<!--               enableUpdateByExample="false"-->
+<!--               enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false"-->
+<!--               selectByExampleQueryId="false">-->
+<!--            <property name="useActualColumnNames" value="false" />-->
+<!--            &lt;!&ndash; 数据库表主键 &ndash;&gt;-->
+<!--            &lt;!&ndash;   <generatedKey column="id" sqlStatement="Mysql" identity="true" /> &ndash;&gt;-->
+<!--        </table>-->
 
     </context>
 </generatorConfiguration>
