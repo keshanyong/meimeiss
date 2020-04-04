@@ -81,6 +81,12 @@
             <artifactId>reactor-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- 1、添加mybatis.generator依赖 -->
+        <dependency>
+            <groupId>org.mybatis.generator</groupId>
+            <artifactId>mybatis-generator-core</artifactId>
+            <version>1.3.7</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -88,6 +94,21 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!--2、添加mybatis.generator插件 -->
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.3.7</version>
+                <configuration>
+                    <!--配置XML文件地址，以下为根目录，如果是resources，则为：src/main/resources/generatorConfig.xml -->
+                    <!--                        <configurationFile>generatorConfig.xml</configurationFile>-->
+                    <configurationFile>src/main/resources/generatorConfig.xml</configurationFile>
+                    <!--允许移动生成的文件 -->
+                    <verbose>true</verbose>
+                    <!--是否覆盖 -->
+                    <overwrite>true</overwrite>
+                </configuration>
             </plugin>
         </plugins>
     </build>
