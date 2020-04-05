@@ -6,7 +6,6 @@ import com.example.meimeiss.service.LoginService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 @Service
 public class LoginServiceImpl implements LoginService {
@@ -16,8 +15,8 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public String getUserData() {
-        List<UserData> list = userDataMapper.getUserDataList();
-        System.out.println(list);
-        return "pass";
+        UserData userData = userDataMapper.selectByPrimaryKey(1);
+        System.out.println(userData);
+        return userData.getNick();
     }
 }

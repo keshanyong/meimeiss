@@ -1,12 +1,17 @@
 package com.example.meimeiss.dao;
 
 import com.example.meimeiss.model.UserData;
-import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
-@Repository
 public interface UserDataMapper {
+    int deleteByPrimaryKey(Integer id);
 
-    List<UserData> getUserDataList();
+    int insert(UserData record);
+
+    int insertSelective(UserData record);
+
+    UserData selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(UserData record);
+
+    int updateByPrimaryKey(UserData record);
 }
