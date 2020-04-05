@@ -2,6 +2,11 @@ spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     name: meimeiss
-    url: jdbc:mysql://localhost:3306/meimeiss
+    url: jdbc:mysql://localhost:3306/meimeiss?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
     username: root
     password: 123456
+
+#mybatis
+mybatis:
+  type-aliases-package: com.example.meimeiss.model
+  mapperLocations: classpath:mapper/*Mapper.xml
