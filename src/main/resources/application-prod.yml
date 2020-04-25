@@ -7,6 +7,8 @@ spring:
     password: sharkO2@1990
 
 #mybatis
-mybatis:
-  type-aliases-package: com.example.meimeiss.model
-  mapperLocations: classpath:mapper/*Mapper.xml
+#mybatis:
+#  type-aliases-package: com.example.meimeiss.model
+#  mapperLocations: classpath:mapper/*Mapper.xml
+#  configuration:
+#     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

@@ -1,6 +1,7 @@
 package com.example.meimeiss.controller;
 
 import com.example.meimeiss.service.LoginService;
+import com.example.meimeiss.verification.LoginIntercept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +15,7 @@ public class LoginController {
     @Autowired
     LoginService loginService;
 
+    @LoginIntercept
     @PostMapping("/userLogin")
     public String UserLogin(){
         return loginService.getUserData();

@@ -6,7 +6,9 @@ spring:
     username: root
     password: 123456
 
-#mybatis
-mybatis:
-  type-aliases-package: com.example.meimeiss.model
-  mapperLocations: classpath:mapper/*Mapper.xml
+##mybatis
+#mybatis:
+#  type-aliases-package: com.example.meimeiss.model
+#  mapperLocations: classpath:mapper/*Mapper.xml
+#  configuration:
+#     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

@@ -1,3 +1,14 @@
 spring:
     profiles:
         active: dev
+
+logging:
+    level:
+        com.eth.wallet.mapper: debug
+
+#mybatis
+mybatis:
+    type-aliases-package: com.example.meimeiss.model
+    mapperLocations: classpath:mapper/*Mapper.xml
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
