@@ -6,6 +6,12 @@ spring:
     username: root
     password: 123456
 
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: 123456
+
 ##mybatis
 #mybatis:
 #  type-aliases-package: com.example.meimeiss.model

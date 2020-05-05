@@ -11,22 +11,26 @@
   <sql id="Base_Column_List">
     id, user_name, password, nick, we_chat_code
   </sql>
+
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from user_data
     where id = #{id,jdbcType=INTEGER}
   </select>
+
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from user_data
     where id = #{id,jdbcType=INTEGER}
   </delete>
+
   <insert id="insert" parameterType="com.example.meimeiss.model.UserData">
     insert into user_data (id, user_name, password, 
       nick, we_chat_code)
     values (#{id,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{nick,jdbcType=VARCHAR}, #{weChatCode,jdbcType=VARCHAR})
   </insert>
+
   <insert id="insertSelective" parameterType="com.example.meimeiss.model.UserData">
     insert into user_data
     <trim prefix="(" suffix=")" suffixOverrides=",">
@@ -64,6 +68,7 @@
       </if>
     </trim>
   </insert>
+
   <update id="updateByPrimaryKeySelective" parameterType="com.example.meimeiss.model.UserData">
     update user_data
     <set>
@@ -82,6 +87,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
+
   <update id="updateByPrimaryKey" parameterType="com.example.meimeiss.model.UserData">
     update user_data
     set user_name = #{userName,jdbcType=VARCHAR},
@@ -90,4 +96,13 @@
       we_chat_code = #{weChatCode,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="getUserData" parameterType="com.example.meimeiss.model.UserData" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from user_data
+    where user_name = #{userName,jdbcType=VARCHAR}
+    and password = #{password,jdbcType=VARCHAR}
+  </select>
+
 </mapper>

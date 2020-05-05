@@ -6,6 +6,12 @@ spring:
     username: root
     password: sharkO2@1990
 
+  redis:
+    database: 0
+    host: 120.25.193.147
+    port: 6379
+    password: fsaiIHBIYUIKHiuygIlkUBtgkd
+
 #mybatis
 #mybatis:
 #  type-aliases-package: com.example.meimeiss.model

@@ -4,7 +4,7 @@ spring:
 
 logging:
     level:
-        com.eth.wallet.mapper: debug
+        com.example.meimeiss.dao: debug
 
 #mybatis
 mybatis:

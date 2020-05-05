@@ -14,4 +14,11 @@ public interface UserDataMapper {
     int updateByPrimaryKeySelective(UserData record);
 
     int updateByPrimaryKey(UserData record);
+
+    /**
+     * 查询用户信息
+     * @param userData
+     * @return
+     */
+    UserData getUserData(UserData userData);
 }
